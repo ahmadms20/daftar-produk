@@ -29,7 +29,12 @@ const ProductsPage = ({ initialProducts, totalProducts = 0 }) => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 {data.map(product => (
                     <div key={product.id}>
-                        <Card image={product.images[0]} title={product.title} price={product.price} />
+                        <Card
+                            image={product.images[0]}
+                            title={product.title}
+                            price={product.price}
+                            category={product.category.name}
+                        />
                     </div>
                 ))}
             </div>
